@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Elora Ornaments | Luxury Jewelry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fdf2f2 0%, #fce4ec 50%, #fdf2f2 100%);
+            color: #5d4037;
+            min-height: 100vh;
+        }
+
+        /* Instagram-like Layout */
+        .app-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-bottom: 70px;
+        }
+
+        /* Header Section - Centered Title */
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #b76e79 0%, #d4a5a5 50%, #b76e79 100%);
+            border-bottom: 3px solid #a05252;
+            z-index: 100;
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(183, 110, 121, 0.4);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .logo-container {
+            position: absolute;
+            left: 20px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(45deg, #b76e79, #d4a5a5, #f8bbd9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid white;
+        }
+
+        /* Centered Website Title */
+        .website-title {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #ffebee, #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 5px 20px;
+        }
+
+        /* Diamond Avatars (Instagram Stories Style) */
+        .stories-container {
+            padding: 25px 0;
+            background: white;
+            border-bottom: 1px solid #e8c8c8;
+            overflow-x: auto;
+            display: flex;
+            gap: 30px;
+            padding-left: 20px;
+            margin: 15px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(183, 110, 121, 0.15);
+        }
+
+        .story-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 130px;
+        }
+
+        .diamond-container {
+            width: 130px;
+            height: 130px;
+            transform: rotate(45deg);
+            border: 4px solid #b76e79;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 8px;
+            background: white;
+            box-shadow: 0 8px 20px rgba(183, 110, 121, 0.25);
+            transition: all 0.4s ease;
+        }
+
+        .diamond-container:hover {
+            transform: rotate(45deg) scale(1.08);
+            box-shadow: 0 12px 30px rgba(183, 110, 121, 0.35);
+            border-color: #a05252;
+        }
+
+        .diamond-content {
+            transform: rotate(-45deg);
+            width: 141%;
+            height: 141%;
+            position: relative;
+            left: -20%;
+            top: -20%;
+        }
+
+        .diamond-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-name {
+            font-size: 15px;
+            color: #a05252;
+            max-width: 130px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 700;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Jewelry Feed */
+        .feed-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 35px;
+            margin: 30px 15px;
+        }
+
+        .post {
+            background-color: white;
+            border: 2px solid #e8c8c8;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(183, 110, 121, 0.25);
+            border-color: #d4a5a5;
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            border-bottom: 2px solid #f0e4e4;
+            background: linear-gradient(to right, #fff, #fdf2f2, #fff);
+        }
+
+        .post-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #b76e79, #d4a5a5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(183, 110, 121, 0.2);
+            font-size: 20px;
+            border: 2px solid white;
+        }
+
+        .user-name {
+            font-weight: 700;
+            font-size: 18px;
+            color: #a05252;
+        }
+
+        .post-options {
+            font-size: 24px;
+            cursor: pointer;
+            color: #b76e79;
+            transition: color 0.2s ease;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .post-options:hover {
+            color: #a05252;
+            background: #f8f0f0;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 650px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fdf2f2;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .post:hover .post-image img {
+            transform: scale(1.04);
+        }
+
+        .post-actions {
+            padding: 20px 25px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .action-icons-left {
+            display: flex;
+            gap: 25px;
+        }
+
+        .action-icon {
+            font-size: 28px;
+            cursor: pointer;
+            color: #b76e79;
+            transition: all 0.3s ease;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .action-icon:hover {
+            color: #a05252;
+            background: #f8f0f0;
+            transform: scale(1.15);
+        }
+
+        .likes-count {
+            padding: 0 25px 15px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #a05252;
+        }
+
+        .post-caption {
+            padding: 0 25px;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #5d4037;
+        }
+
+        .caption-user {
+            font-weight: 700;
+            margin-right: 10px;
+            color: #a05252;
+        }
+
+        .jewelry-details {
+            padding: 20px 25px;
+            background: linear-gradient(to right, #fdf2f2, #fff, #fdf2f2);
+            margin: 15px 25px;
+            border-radius: 15px;
+            border-left: 5px solid #b76e79;
+            box-shadow: 0 4px 15px rgba(183, 110, 121, 0.15);
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            font-size: 15px;
+            align-items: flex-start;
+        }
+
+        .detail-label {
+            color: #b76e79;
+            font-weight: 700;
+            width: 150px;
+            flex-shrink: 0;
+            font-size: 15px;
+        }
+
+        .detail-value {
+            color: #5d4037;
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        .jewelry-price {
+            color: #a05252;
+            font-weight: bold;
+            font-size: 26px;
+            margin-top: 15px;
+            text-align: right;
+            padding-top: 15px;
+            border-top: 2px dashed #e8c8c8;
+        }
+
+        .post-time {
+            padding: 0 25px 20px;
+            color: #b0a5a5;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .add-comment {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            border-top: 2px solid #f0e4e4;
+            background: #fdf9f9;
+        }
+
+        .comment-input {
+            flex: 1;
+            background: white;
+            border: 2px solid #e8c8c8;
+            border-radius: 30px;
+            color: #5d4037;
+            font-size: 16px;
+            outline: none;
+            padding: 15px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .comment-input:focus {
+            border-color: #b76e79;
+            box-shadow: 0 0 0 3px rgba(183, 110, 121, 0.2);
+        }
+
+        .comment-input::placeholder {
+            color: #b0a5a5;
+        }
+
+        .post-btn {
+            color: #b76e79;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            opacity: 0.3;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+            padding: 15px 25px;
+            border-radius: 30px;
+        }
+
+        .post-btn.active {
+            opacity: 1;
+            background: #f0e4e4;
+        }
+
+        .post-btn.active:hover {
+            color: #a05252;
+            background: #e8d6d6;
+            transform: translateY(-3px);
+        }
+
+        /* Footer Navigation */
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #b76e79 0%, #d4a5a5 50%, #b76e79 100%);
+            border-top: 3px solid #a05252;
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-around;
+            z-index: 100;
+            box-shadow: 0 -4px 20px rgba(183, 110, 121, 0.4);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+        }
+
+        .nav-item.active {
+            color: #ffebee;
+            transform: translateY(-10px);
+        }
+
+        .nav-item:hover {
+            color: #ffebee;
+            transform: translateY(-6px);
+        }
+
+        .nav-label {
+            font-size: 12px;
+            margin-top: 6px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        /* Chatbot Assistant - Centered */
+        .chatbot-assistant {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .chatbot-toggle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #b76e79, #d4a5a5);
+            color: white;
+            border: 4px solid white;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(183, 110, 121, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            transition: all 0.4s ease;
+        }
+
+        .chatbot-toggle:hover {
+            transform: translateX(-50%) scale(1.2) rotate(15deg);
+            box-shadow: 0 12px 40px rgba(183, 110, 121, 0.8);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 420px;
+            height: 550px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(183, 110, 121, 0.4);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            border: 4px solid #d4a5a5;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(to right, #b76e79, #d4a5a5);
+            color: white;
+            padding: 20px 30px;
+            font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #a05252;
+        }
+
+        .chatbot-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chatbot-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b76e79;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            border: 2px solid #d4a5a5;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .chatbot-close:hover {
+            color: #ffebee;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatbot-body {
+            flex: 1;
+            padding: 25px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #fdf9f9;
+        }
+
+        .chat-message {
+            max-width: 85%;
+            padding: 18px 22px;
+            border-radius: 22px;
+            font-size: 16px;
+            line-height: 1.6;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-message {
+            align-self: flex-end;
+            background: linear-gradient(to right, #b76e79, #d4a5a5);
+            color: white;
+            border-bottom-right-radius: 8px;
+        }
+
+        .bot-message {
+            align-self: flex-start;
+            background: white;
+            color: #5d4037;
+            border-bottom-left-radius: 8px;
+            border: 2px solid #e8c8c8;
+        }
+
+        .quick-questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .quick-question {
+            background: #f0e4e4;
+            color: #b76e79;
+            border: 2px solid #e8c8c8;
+            border-radius: 20px;
+            padding: 12px 18px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+
+        .quick-question:hover {
+            background: #e8d6d6;
+            border-color: #b76e79;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(183, 110, 121, 0.2);
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 20px;
+            border-top: 3px solid #e8c8c8;
+            background: white;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 18px 25px;
+            background: #fdf9f9;
+            border: 2px solid #e8c8c8;
+            border-radius: 35px;
+            outline: none;
+            font-size: 16px;
+            color: #5d4037;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-input input:focus {
+            border-color: #b76e79;
+            box-shadow: 0 0 0 4px rgba(183, 110, 121, 0.2);
+        }
+
+        .chatbot-input input::placeholder {
+            color: #b0a5a5;
+        }
+
+        .chatbot-input button {
+            background: linear-gradient(to right, #b76e79, #d4a5a5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-left: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background: linear-gradient(to right, #a05252, #b76e79);
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(183, 110, 121, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .app-container {
+                padding-bottom: 80px;
+            }
+            
+            .post-image {
+                height: 500px;
+            }
+            
+            .chatbot-window {
+                width: 350px;
+                height: 480px;
+            }
+            
+            .website-title {
+                font-size: 24px;
+            }
+            
+            .diamond-container {
+                width: 110px;
+                height: 110px;
+            }
+            
+            .story-item {
+                min-width: 110px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0 10px;
+            }
+            
+            .post-image {
+                height: 400px;
+            }
+            
+            .stories-container {
+                padding-left: 10px;
+                margin: 10px;
+                gap: 20px;
+            }
+            
+            .diamond-container {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .story-item {
+                min-width: 90px;
+            }
+            
+            .feed-container {
+                gap: 25px;
+                margin: 20px 10px;
+            }
+            
+            .chatbot-window {
+                width: 300px;
+                height: 420px;
+            }
+            
+            .website-title {
+                font-size: 20px;
+            }
+            
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+            
+            .chatbot-toggle {
+                width: 60px;
+                height: 60px;
+                font-size: 26px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8bbd9;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4a5a5;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b76e79;
+        }
+
+        /* Chatbot scrollbar */
+        .chatbot-body::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chatbot-body::-webkit-scrollbar-track {
+            background: #f8bbd9;
+        }
+
+        .chatbot-body::-webkit-scrollbar-thumb {
+            background: #b76e79;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header with Centered Title -->
+        <header>
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo-icon">EE</div>
+                </div>
+                <h1 class="website-title">Elite Elora Ornaments</h1>
+            </div>
+        </header>
+
+        <!-- Diamond Avatars (Stories) -->
+        <div class="stories-container">
+            <div class="story-item" onclick="filterByCategory('all')">
+                <div class="diamond-container">
+                    <div class="diamond-content">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="All Jewelry" class="diamond-img">
+                    </div>
+                </div>
+                <div class="story-name">All Collections</div>
+            </div>
+            
+            <div class="story-item" onclick="filterByCategory('chains')">
+                <div class="diamond-container">
+                    <div class="diamond-content">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Chains" class="diamond-img">
+                    </div>
+                </div>
+                <div class="story-name">Gold Chains</div>
+            </div>
+            
+            <div class="story-item" onclick="filterByCategory('earrings')">
+                <div class="diamond-container">
+                    <div class="diamond-content">
+                        <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Earrings" class="diamond-img">
+                    </div>
+                </div>
+                <div class="story-name">Earrings</div>
+            </div>
+            
+            <div class="story-item" onclick="filterByCategory('rings')">
+                <div class="diamond-container">
+                    <div class="diamond-content">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Rings" class="diamond-img">
+                    </div>
+                </div>
+                <div class="story-name">Rings</div>
+            </div>
+            
+            <div class="story-item" onclick="filterByCategory('bangles')">
+                <div class="diamond-container">
+                    <div class="diamond-content">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bangles" class="diamond-img">
+                    </div>
+                </div>
+                <div class="story-name">Bangles</div>
+            </div>
+        </div>
+
+        <!-- Jewelry Feed -->
+        <div class="feed-container" id="feedContainer">
+            <!-- Posts will be generated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <nav class="footer-nav">
+        <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-search"></i>
+            <span class="nav-label">Search</span>
+        </a>
+        <a href="#" class="nav-item chatbot-toggle-footer" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+            <span class="nav-label">Chatbot</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="far fa-heart"></i>
+            <span class="nav-label">Wishlist</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="far fa-user"></i>
+            <span class="nav-label">Profile</span>
+        </a>
+    </nav>
+
+    <!-- Centered Chatbot Assistant -->
+    <div class="chatbot-assistant">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-gem"></i>
+        </button>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <div class="chatbot-icon">EE</div>
+                    <span>Elite Elora Assistant</span>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            
+            <div class="chatbot-body" id="chatbotBody">
+                <div class="chat-message bot-message">
+                    Welcome to Elite Elora Ornaments! 🤗 What would you like to see today?
+                </div>
+            </div>
+            
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Jewelry Data (No traditional category)
+        const jewelryPosts = [
+            {
+                id: 1,
+                username: "elite_elora_official",
+                userInitial: "EE",
+                category: "chains",
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                likes: 1890,
+                caption: "Solid Cable Gold Chain - 916 Purity. Perfect for daily wear, this 5-pound chain features a classic cable design that never goes out of style. Ideal for regular use with durability guaranteed.",
+                details: {
+                    material: "916 Gold (22K)",
+                    weight: "5 pounds (approx 2268 grams)",
+                    design: "Solid Cable Chain",
+                    length: "22 inches",
+                    purity: "91.6% Gold (22K)",
+                    certification: "BIS Hallmarked",
+                    bestFor: "Daily wear & special occasions"
+                },
+                price: "₹2,45,000",
+                timeAgo: "5 HOURS AGO"
+            },
+            {
+                id: 2,
+                username: "elite_elora_official",
+                userInitial: "EE",
+                category: "earrings",
+                image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                likes: 1823,
+                caption: "Diamond Stud Earrings in Rose Gold. Featuring brilliant-cut diamonds set in 18K rose gold. Perfect for both casual and formal occasions, these earrings offer timeless elegance.",
+                details: {
+                    material: "18K Rose Gold & Diamonds",
+                    carat: "2.5 carats total",
+                    design: "Classic Stud Earrings",
+                    backing: "Secure screw-back closure",
+                    diamonds: "Round brilliant cut",
+                    quality: "VS1 clarity, F-G color",
+                    warranty: "Lifetime maintenance included"
+                },
+                price: "₹1,85,000",
+                timeAgo: "1 DAY AGO"
+            },
+            {
+                id: 3,
+                username: "elite_elora_official",
+                userInitial: "EE",
+                category: "rings",
+                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                likes: 2456,
+                caption: "Sapphire & Diamond Eternity Ring. Featuring a stunning 2.5ct blue sapphire surrounded by brilliant diamonds in 18K white gold. Perfect for engagements and anniversaries.",
+                details: {
+                    material: "18K White Gold & Diamonds",
+                    carat: "5.2 carats total",
+                    center: "2.5ct Ceylon Blue Sapphire",
+                    setting: "Prong setting with diamond halo",
+                    size: "Adjustable (size 4-8 available)",
+                    certificate: "GIA Certified",
+                    warranty: "2-year international warranty"
+                },
+                price: "₹2,85,000",
+                timeAgo: "2 DAYS AGO"
+            },
+            {
+                id: 4,
+                username: "elite_elora_official",
+                userInitial: "EE",
+                category: "bangles",
+                image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                likes: 1567,
+                caption: "Traditional Gold Bangles Set. Crafted with 22K gold, these bangles feature intricate traditional designs perfect for weddings and festivals.",
+                details: {
+                    material: "22K Gold",
+                    weight: "85 grams (set of 4)",
+                    design: "Traditional Indian",
+                    diameter: "2.5 inches (adjustable)",
+                    purity: "91.6% Gold (22K)",
+                    certification: "BIS Hallmarked",
+                    collection: "Heritage Collection"
+                },
+                price: "₹3,25,000",
+                timeAgo: "3 DAYS AGO"
+            }
+        ];
+
+        // Chatbot Conversation Data
+        const chatbotResponses = {
+            // Initial greeting
+            "welcome": "Welcome to Elite Elora Ornaments! 🤗 What would you like to see today?",
+            
+            // Chain and earrings conversation
+            "chain and earrings": "Normal gold or 916?",
+            "chains and earrings": "Normal gold or 916?",
+            "earrings and chain": "Normal gold or 916?",
+            "hm": "What do you want to see?",
+            "hmm": "What do you want to see?",
+            
+            // Gold type responses
+            "normal gold or 916": "Normal gold or 916?",
+            "916": "916 is 22K gold with 91.6% purity. How many pounds do you want to see?",
+            "normal gold": "Normal gold is 22K with 91.6% purity. How many pounds do you want to see?",
+            
+            // Best for regular use
+            "what one is best for regular use": "The best one for regular use is normal gold, how many pounds are u want see",
+            "best for regular use": "The best one for regular use is normal gold, how many pounds are u want see",
+            "regular use": "For regular use, we recommend normal gold. How many pounds do you want to see?",
+            
+            // Weight specifications
+            "5 pounds": "OK mam can I show u",
+            "5 pound": "OK mam can I show u",
+            "five pounds": "OK mam can I show u",
+            
+            // Designs available
+            "what designs are available": "Bead, solid cable, figaro, mesh, roll, snake, wheat are available",
+            "designs available": "Bead, solid cable, figaro, mesh, roll, snake, wheat are available",
+            "available designs": "Bead, solid cable, figaro, mesh, roll, snake, wheat are available",
+            
+            // Show request
+            "yah show": "This is nice for u",
+            "yes show": "This is nice for u",
+            "show me": "This is nice for u",
+            "show": "This is nice for u",
+            
+            // Gold rate
+            "what is the today gold rate": "1 gram 12,400\n8 gram 99,200",
+            "today gold rate": "1 gram 12,400\n8 gram 99,200",
+            "gold rate": "1 gram 12,400\n8 gram 99,200",
+            "rate": "1 gram 12,400\n8 gram 99,200",
+            
+            // Making charges
+            "what is the servant and waste percentage": "8%",
+            "making charges": "8%",
+            "waste percentage": "8%",
+            "charges": "8%",
+            
+            // Purchase confirmation
+            "ok i can buy it": "Thank you 🤗\nVisit you again Elite Elora Ornaments",
+            "i will buy": "Thank you 🤗\nVisit you again Elite Elora Ornaments",
+            "i want to buy": "Thank you 🤗\nVisit you again Elite Elora Ornaments",
+            "purchase": "Thank you 🤗\nVisit you again Elite Elora Ornaments",
+            "buy": "Thank you 🤗\nVisit you again Elite Elora Ornaments",
+            
+            // Thank you responses
+            "thank you": "You're welcome! 😊 Visit us again at Elite Elora Ornaments for more exquisite jewelry!",
+            "thanks": "You're welcome! 😊 Visit us again at Elite Elora Ornaments for more exquisite jewelry!",
+            "thankyou": "You're welcome! 😊 Visit us again at Elite Elora Ornaments for more exquisite jewelry!",
+            
+            // Default response
+            "default": "I'm here to help with Elite Elora Ornaments. You can ask about chains, earrings, gold rates, designs, or make a purchase!"
+        };
+
+        // Initialize website
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFeed(jewelryPosts);
+            setupEventListeners();
+            initializeChatbot();
+        });
+
+        // Render jewelry feed
+        function renderFeed(posts) {
+            const feedContainer = document.getElementById('feedContainer');
+            feedContainer.innerHTML = '';
+            
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.dataset.category = post.category;
+                
+                postElement.innerHTML = `
+                    <div class="post-header">
+                        <div class="post-user">
+                            <div class="user-avatar">${post.userInitial}</div>
+                            <div class="user-name">${post.username}</div>
+                        </div>
+                        <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="post-image">
+                        <img src="${post.image}" alt="${post.caption.substring(0, 50)}...">
+                    </div>
+                    
+                    <div class="post-actions">
+                        <div class="action-icons-left">
+                            <i class="far fa-heart action-icon" onclick="toggleLike(${post.id})" id="like-${post.id}"></i>
+                            <i class="far fa-comment action-icon"></i>
+                            <i class="far fa-paper-plane action-icon"></i>
+                        </div>
+                        <i class="far fa-bookmark action-icon"></i>
+                    </div>
+                    
+                    <div class="likes-count" id="likes-${post.id}">${post.likes.toLocaleString()} likes</div>
+                    
+                    <div class="post-caption">
+                        <span class="caption-user">${post.username}</span>
+                        ${post.caption}
+                    </div>
+                    
+                    <div class="jewelry-details">
+                        ${Object.entries(post.details).map(([key, value]) => `
+                            <div class="detail-row">
+                                <div class="detail-label">${key.charAt(0).toUpperCase() + key.slice(1)}:</div>
+                                <div class="detail-value">${value}</div>
+                            </div>
+                        `).join('')}
+                        <div class="jewelry-price">${post.price}</div>
+                    </div>
+                    
+                    <div class="post-time">${post.timeAgo}</div>
+                    
+                    <div class="add-comment">
+                        <input type="text" class="comment-input" placeholder="Add a comment..." onkeyup="togglePostButton(this)">
+                        <button class="post-btn" disabled>Post</button>
+                    </div>
+                `;
+                
+                feedContainer.appendChild(postElement);
+            });
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            const allPosts = [...jewelryPosts];
+            
+            if (category === 'all') {
+                renderFeed(allPosts);
+            } else {
+                const filteredPosts = allPosts.filter(post => post.category === category);
+                renderFeed(filteredPosts);
+            }
+            
+            // Update active story
+            document.querySelectorAll('.story-item').forEach(item => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+            });
+            
+            // Highlight selected category
+            event.currentTarget.style.opacity = '0.9';
+            event.currentTarget.style.transform = 'scale(0.95)';
+        }
+
+        // Toggle like
+        function toggleLike(postId) {
+            const likeIcon = document.getElementById(`like-${postId}`);
+            const likesCount = document.getElementById(`likes-${postId}`);
+            const post = jewelryPosts.find(p => p.id === postId);
+            
+            if (likeIcon.classList.contains('far')) {
+                likeIcon.classList.remove('far');
+                likeIcon.classList.add('fas');
+                likeIcon.style.color = '#e91e63';
+                post.likes += 1;
+            } else {
+                likeIcon.classList.remove('fas');
+                likeIcon.classList.add('far');
+                likeIcon.style.color = '';
+                post.likes -= 1;
+            }
+            
+            likesCount.textContent = `${post.likes.toLocaleString()} likes`;
+        }
+
+        // Toggle post button
+        function togglePostButton(input) {
+            const postBtn = input.nextElementSibling;
+            if (input.value.trim() !== '') {
+                postBtn.classList.add('active');
+                postBtn.disabled = false;
+            } else {
+                postBtn.classList.remove('active');
+                postBtn.disabled = true;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Footer navigation
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all
+                    document.querySelectorAll('.nav-item').forEach(nav => {
+                        nav.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked
+                    this.classList.add('active');
+                    
+                    // Show appropriate content based on navigation
+                    const label = this.querySelector('.nav-label').textContent;
+                    if (label === 'Home') {
+                        renderFeed(jewelryPosts);
+                        window.scrollTo({top: 0, behavior: 'smooth'});
+                    } else if (label === 'Search') {
+                        alert('Search functionality would open here');
+                    } else if (label === 'Wishlist') {
+                        alert('Your wishlist would show here');
+                    } else if (label === 'Profile') {
+                        alert('Your profile page would show here');
+                    } else if (label === 'Chatbot') {
+                        toggleChatbot();
+                    }
+                });
+            });
+            
+            // Post options
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('fa-ellipsis-h')) {
+                    alert('Post options: Share, Save, Report, Copy Link');
+                }
+            });
+        }
+
+        // Chatbot Functions
+        function initializeChatbot() {
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const sendMessage = document.getElementById('sendMessage');
+            
+            let isChatbotOpen = false;
+            
+            // Toggle chatbot window
+            chatbotToggle.addEventListener('click', function() {
+                toggleChatbot();
+            });
+            
+            // Close chatbot window
+            chatbotClose.addEventListener('click', function() {
+                chatbotWindow.style.display = 'none';
+                isChatbotOpen = false;
+            });
+            
+            // Send message
+            sendMessage.addEventListener('click', function() {
+                sendChatbotMessage();
+            });
+            
+            // Function to toggle chatbot
+            window.toggleChatbot = function() {
+                if (!isChatbotOpen) {
+                    chatbotWindow.style.display = 'flex';
+                    isChatbotOpen = true;
+                    // Auto-scroll to bottom
+                    setTimeout(() => {
+                        const chatbotBody = document.getElementById('chatbotBody');
+                        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                    }, 100);
+                } else {
+                    chatbotWindow.style.display = 'none';
+                    isChatbotOpen = false;
+                }
+            }
+        }
+        
+        // Handle enter key in chatbot input
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendChatbotMessage();
+            }
+        }
+        
+        // Send message to chatbot
+        function sendChatbotMessage() {
+            const chatInput = document.getElementById('chatInput');
+            const message = chatInput.value.trim().toLowerCase();
+            
+            if (message === '') return;
+            
+            // Add user message
+            addChatbotMessage(message, 'user');
+            
+            // Clear input
+            chatInput.value = '';
+            
+            // Process message and get bot response
+            setTimeout(() => {
+                const response = getChatbotResponse(message);
+                addChatbotMessage(response, 'bot');
+            }, 500);
+        }
+        
+        // Add message to chatbot
+        function addChatbotMessage(text, sender) {
+            const chatbotBody = document.getElementById('chatbotBody');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}-message`;
+            
+            // Format response with line breaks if needed
+            const formattedText = text.replace(/\n/g, '<br>');
+            messageDiv.innerHTML = formattedText;
+            
+            chatbotBody.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+        
+        // Get chatbot response
+        function getChatbotResponse(userMessage) {
+            // Check for exact matches
+            for (const key in chatbotResponses) {
+                if (userMessage.includes(key)) {
+                    return chatbotResponses[key];
+                }
+            }
+            
+            // Check for specific patterns
+            if (userMessage.includes('chain') && userMessage.includes('earring')) {
+                return chatbotResponses["chain and earrings"];
+            }
+            
+            if (userMessage.includes('design')) {
+                return chatbotResponses["what designs are available"];
+            }
+            
+            if (userMessage.includes('gold rate') || userMessage.includes('rate today')) {
+                return chatbotResponses["what is the today gold rate"];
+            }
+            
+            if (userMessage.includes('making') || userMessage.includes('charge') || userMessage.includes('waste')) {
+                return chatbotResponses["what is the servant and waste percentage"];
+            }
+            
+            if (userMessage.includes('regular') || userMessage.includes('daily')) {
+                return chatbotResponses["what one is best for regular use"];
+            }
+            
+            if (userMessage.includes('thank')) {
+                return chatbotResponses["thank you"];
+            }
+            
+            if (userMessage.includes('hi') || userMessage.includes('hello') || userMessage.includes('hey')) {
+                return chatbotResponses["welcome"];
+            }
+            
+            if (userMessage.includes('hm') || userMessage.includes('hmm') || userMessage.includes('hmmm')) {
+                return chatbotResponses["hm"];
+            }
+            
+            if (userMessage.includes('show') || userMessage.includes('display')) {
+                return chatbotResponses["yah show"];
+            }
+            
+            if (userMessage.includes('buy') || userMessage.includes('purchase')) {
+                return chatbotResponses["ok i can buy it"];
+            }
+            
+            if (userMessage.includes('916') || userMessage.includes('22k')) {
+                return chatbotResponses["916"];
+            }
+            
+            if (userMessage.includes('normal gold') || userMessage.includes('regular gold')) {
+                return chatbotResponses["normal gold"];
+            }
+            
+            if (userMessage.includes('5 pound') || userMessage.includes('five pound')) {
+                return chatbotResponses["5 pounds"];
+            }
+            
+            // Default response
+            return chatbotResponses["default"];
+        }
+
+        // Simulate Instagram-like interactions
+        setInterval(() => {
+            // Randomly update like counts to simulate engagement
+            const randomPostId = Math.floor(Math.random() * jewelryPosts.length) + 1;
+            const post = jewelryPosts.find(p => p.id === randomPostId);
+            if (post && Math.random() > 0.7) {
+                post.likes += Math.floor(Math.random() * 10) + 1;
+                const likesElement = document.getElementById(`likes-${randomPostId}`);
+                if (likesElement) {
+                    likesElement.textContent = `${post.likes.toLocaleString()} likes`;
+                }
+            }
+        }, 15000);
+    </script>
+</body>
+</html>
